@@ -23,7 +23,7 @@ def letterbox(img, new_size=640):
     canvas[:nh, :nw] = img_resized
     return canvas
 
-src_dir = "Dataset/images_clean"
+src_dir = "Dataset/Images_clean"
 out_dir = "Dataset/Images_clean"
 os.makedirs(out_dir, exist_ok=True)
 
@@ -41,3 +41,4 @@ for f in os.listdir("Dataset/Images_clean"):
     img = cv2.imread(os.path.join("Images_clean", f))
     if img is None or img.shape[0] < min_size or img.shape[1] < min_size:
         os.remove(os.path.join("Dataset/Images_clean", f))
+
