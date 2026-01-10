@@ -1,9 +1,0 @@
-path: D:\NCKH_AI\dataset\dataset_yolo
-train: images/train
-val: images/val
-test: images/test
-
-names:
-  0: TC_K15
-  1: TC_K14
-  
