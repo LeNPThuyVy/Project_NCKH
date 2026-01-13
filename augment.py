@@ -25,14 +25,15 @@ def rotate_image_no_black_border(image, angle):
 
 def augment_image(image):
     augmented = image.copy()
-
-    angle = random.uniform(-5, 5)
-    augmented = rotate_image_no_black_border(augmented, angle)
-
-    alpha = random.uniform(0.9, 1.1)
-    beta = random.randint(-15, 15)
+    alpha = random.uniform(0.7, 1.3)
+    beta = random.randint(-50, 50)
+    
     augmented = cv2.convertScaleAbs(augmented, alpha=alpha, beta=beta)
-
+    
+    # lật ảnh
+    if random.choice([True, False]):
+        augmented = cv2.flip(augmented, 1)
+    
     return augmented
 
 # copy ảnh gốc
