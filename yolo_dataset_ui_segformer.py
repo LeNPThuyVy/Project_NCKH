@@ -517,6 +517,8 @@ class ManualAnnotator(tk.Toplevel):
         scale = min(cw / self.img_w, ch / self.img_h, 1.0)
         self.scale = scale
         disp_w, disp_h = int(self.img_w * scale), int(self.img_h * scale)
+        disp_w = max(1, disp_w)
+        disp_h = max(1, disp_h)
         self.disp_w, self.disp_h = disp_w, disp_h
 
         pil = pil.resize((disp_w, disp_h))
