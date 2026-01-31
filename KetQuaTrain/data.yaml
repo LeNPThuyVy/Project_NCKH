@@ -1,0 +1,9 @@
+path: D:/NCKH_AI/dataset_yolo
+train: images/train
+val: images/val
+test: images/test
+
+nc: 2
+names:
+  0: uniform
+  1: non_uniform
